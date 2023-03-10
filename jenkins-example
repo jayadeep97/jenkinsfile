@@ -1,20 +1,19 @@
 pipeline {
     agent any
-
     stages {
-        stage('checkout') {
-            steps {
-                echo 'Hello World'
-            }
-        }
         stage('build') {
             steps {
-                echo 'Hi there'
+                echo 'building the application'
+            }
+        }
+        stage('test') {
+            steps {
+                echo 'testing the application'
             }
         }
         stage('deploy') {
             steps {
-                echo 'hi hello'
+                echo 'deploaying the application'
             }
         }
     }
